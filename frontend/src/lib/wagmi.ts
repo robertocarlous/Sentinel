@@ -2,7 +2,7 @@ import { http, createConfig } from 'wagmi'
 import { mainnet, sepolia, arbitrum, optimism, base } from 'wagmi/chains'
 import { injected, walletConnect, coinbaseWallet } from 'wagmi/connectors'
 
-// Somnia chain configuration (you can customize this)
+// Somnia Shannon Testnet configuration
 const somniaTestnet = {
   id: 50312, 
   name: 'Somnia Testnet',
@@ -13,14 +13,14 @@ const somniaTestnet = {
   },
   rpcUrls: {
     default: {
-      http: ['https://testnet.somnia.network/rpc'], // Replace with actual RPC URL
+      http: ['https://rpc.ankr.com/somnia_testnet'], // Ankr RPC with CORS support
     },
     public: {
-      http: ['https://testnet.somnia.network/rpc'],
+      http: ['https://rpc.ankr.com/somnia_testnet'],
     },
   },
   blockExplorers: {
-    default: { name: 'SomniaExplorer', url: 'https://testnet-explorer.somnia.network' },
+    default: { name: 'Somnia Explorer', url: 'https://explorer.somnia.network' },
   },
   testnet: true,
 } as const
